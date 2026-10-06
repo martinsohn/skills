@@ -20,6 +20,7 @@ Use this workflow when developing a new OpenHound collector or making broad coll
 4. Implement source collection.
    - Add or update API clients, source context, DLT resources, transformers, auth, and secrets.
    - Use `.agents/skills/openhound/references/source-collection.md`.
+   - For collectors with multiple authentication methods, also use `.agents/skills/openhound/references/multi-auth.md`.
 
 5. Add collected assets and relationships.
    - Add Pydantic asset models, graph property dataclasses, kind constants, exports, `as_node`, and `edges`.
