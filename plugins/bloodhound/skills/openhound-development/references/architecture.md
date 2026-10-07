@@ -1,6 +1,6 @@
 # OpenHound Standards
 
-OpenHound is a resource collector built on DLT that converts upstream service resources into BloodHound-compatible OpenGraph nodes and edges.
+OpenHound is a resource collector built on DLT that converts service resources into BloodHound-compatible OpenGraph nodes and edges.
 
 ## Core Architecture
 
@@ -17,18 +17,6 @@ collect -> preproc -> convert
 | `convert` | Read JSONL plus lookup data and emit OpenGraph nodes/edges. |
 
 All phases are registered in `src/<pkg>/main.py` using one `OpenHound("<source>", source_kind=<kind>)` app instance and the `@app.collect()`, `@app.preproc()`, and `@app.convert()` decorators.
-
-## Naming Conventions
-
-Derive a short uppercase prefix from the service slug, usually two to four characters, and use it consistently across class names and kind strings.
-
-| Service slug | Prefix | Example class | Example kind |
-|---|---|---|---|
-| `okta` | `OK` | `OKNode` | `OK_User` |
-| `github` | `GH` | `GHNodeProperties` | `GH_Repository` |
-| `kubernetes` | `K8S` | `K8SLookup` | `K8S_Pod` |
-
-Common patterns: `<PREFIX>NodeProperties`, `<PREFIX>Node`, `<PREFIX>EdgeProperties`, `<PREFIX>Lookup`.
 
 ## Required Rules
 
