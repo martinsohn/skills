@@ -123,3 +123,11 @@ Produce a short collector design brief:
 ```
 
 Keep the brief practical. Avoid speculative resources, edges, or abstractions that are not supported by the target service requirements or API data.
+
+## Existing Research
+
+When research artifacts are supplied:
+
+- Use the MVP scope, graph model, relationship evidence, and authentication comparison as planning inputs.
+- Carry agreed kinds, edge directions, creation conditions, and traversability into the collector plan.
+- Record unresolved collection questions and any necessary model changes with supporting evidence.
